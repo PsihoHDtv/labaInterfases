@@ -48,6 +48,12 @@
     <Compile Include="FilePathSelect.Designer.cs">
       <DependentUpon>FilePathSelect.cs</DependentUpon>
     </Compile>
+    <Compile Include="rgbBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rgbBox.Designer.cs">
+      <DependentUpon>rgbBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="NumberBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -55,11 +61,20 @@
       <DependentUpon>NumberBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rgbControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="rgbControl.Designer.cs">
+      <DependentUpon>rgbControl.cs</DependentUpon>
+    </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FilePathSelect.resx">
       <DependentUpon>FilePathSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rgbControl.resx">
+      <DependentUpon>rgbControl.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

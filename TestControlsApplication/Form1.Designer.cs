@@ -29,17 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.numberBox1 = new LabControls.NumberBox(this.components);
             this.filePathSelect1 = new LabControls.FilePathSelect();
+            this.numberBox1 = new LabControls.NumberBox(this.components);
+            this.rgbControl1 = new LabControls.rgbControl();
             this.SuspendLayout();
-            // 
-            // numberBox1
-            // 
-            this.numberBox1.ForeColor = System.Drawing.Color.Red;
-            this.numberBox1.Location = new System.Drawing.Point(72, 39);
-            this.numberBox1.Name = "numberBox1";
-            this.numberBox1.Size = new System.Drawing.Size(100, 20);
-            this.numberBox1.TabIndex = 0;
             // 
             // filePathSelect1
             // 
@@ -49,11 +42,27 @@
             this.filePathSelect1.Size = new System.Drawing.Size(344, 28);
             this.filePathSelect1.TabIndex = 1;
             // 
+            // numberBox1
+            // 
+            this.numberBox1.ForeColor = System.Drawing.Color.Red;
+            this.numberBox1.Location = new System.Drawing.Point(72, 39);
+            this.numberBox1.Name = "numberBox1";
+            this.numberBox1.Size = new System.Drawing.Size(100, 20);
+            this.numberBox1.TabIndex = 0;
+            // 
+            // rgbControl1
+            // 
+            this.rgbControl1.Location = new System.Drawing.Point(457, 130);
+            this.rgbControl1.Name = "rgbControl1";
+            this.rgbControl1.Size = new System.Drawing.Size(283, 150);
+            this.rgbControl1.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.rgbControl1);
             this.Controls.Add(this.filePathSelect1);
             this.Controls.Add(this.numberBox1);
             this.Name = "Form1";
@@ -67,6 +76,7 @@
 
         private LabControls.NumberBox numberBox1;
         private LabControls.FilePathSelect filePathSelect1;
+        private LabControls.rgbControl rgbControl1;
     }
 }
 
