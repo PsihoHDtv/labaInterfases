@@ -1,4 +1,11 @@
-﻿namespace TestControlsApplication
+﻿//using PluginInterface;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
+using System.Windows.Forms;
+
+namespace TestControlsApplication
 {
     partial class Form1
     {
@@ -69,9 +76,35 @@
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
-
+            //FindPlugins();
         }
-
+        //Dictionary<string, IPlugin> plugins = new Dictionary<string, IPlugin>();
+        //void FindPlugins()
+        //{
+        //    // папка с плагинами
+        //    string folder = System.AppDomain.CurrentDomain.BaseDirectory;
+        //    // dll-файлы в этой папке
+        //    string[] files = Directory.GetFiles(folder, "*.dll");
+        //    foreach (string file in files)
+        //        try
+        //        {
+        //            Assembly assembly = Assembly.LoadFile(file);
+        //            foreach (Type type in assembly.GetTypes())
+        //            {
+        //                Type iface = type.GetInterface("Interface.IPlugin");
+        //                if (iface != null)
+        //                {
+        //                    PluginInterface.IPlugin plugin = (PluginInterface.IPlugin)Activator.CreateInstance(type);
+        //                    plugins.Add(plugin.Name, plugin);
+        //                }
+        //            }
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            MessageBox.Show(" Ошибка загрузки плагина\n" + ex.Message);
+        //        }
+        //}
+       
         #endregion
 
         private LabControls.NumberBox numberBox1;
