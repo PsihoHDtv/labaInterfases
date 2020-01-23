@@ -23,6 +23,7 @@ namespace LabControls
             rgbBoxBlue.isDec = true;
             rgbBoxGreen.isDec = true;
             rgbBoxRed.isDec = true;
+            FillButton();
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
@@ -31,6 +32,30 @@ namespace LabControls
             rgbBoxBlue.isDec = false;
             rgbBoxGreen.isDec = false;
             rgbBoxRed.isDec = false;
+            FillButton();
+        }
+
+        private void rgbBoxRed_TextChanged(object sender, EventArgs e)
+        {
+
+            FillButton();
+        }
+
+        private void rgbBoxGreen_TextChanged(object sender, EventArgs e)
+        {
+            FillButton();
+
+        }
+
+        private void rgbBoxBlue_TextChanged(object sender, EventArgs e)
+        {
+            FillButton();
+        }
+
+        private void FillButton()
+        {
+            textBox1.Text= rgbBoxRed.Text.ToString()+rgbBoxGreen.Text.ToString() + rgbBoxBlue.Text.ToString();
+            button1.BackColor = Color.FromArgb(rgbBoxRed.value, rgbBoxGreen.value, rgbBoxBlue.value);
         }
     }
 }

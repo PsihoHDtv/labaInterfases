@@ -27,7 +27,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // rgbBox
+            // 
+            this.TextChanged += new System.EventHandler(this.rgbBox_TextChanged);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

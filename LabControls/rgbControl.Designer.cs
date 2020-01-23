@@ -34,9 +34,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.rgbBoxRed = new LabControls.rgbBox(this.components);
-            this.rgbBoxGreen = new LabControls.rgbBox(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.rgbBoxBlue = new LabControls.rgbBox(this.components);
+            this.rgbBoxGreen = new LabControls.rgbBox(this.components);
+            this.rgbBoxRed = new LabControls.rgbBox(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -90,34 +92,68 @@
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
-            // rgbBoxRed
+            // button1
             // 
-            this.rgbBoxRed.ForeColor = System.Drawing.Color.Red;
-            this.rgbBoxRed.Location = new System.Drawing.Point(88, 11);
-            this.rgbBoxRed.Name = "rgbBoxRed";
-            this.rgbBoxRed.Size = new System.Drawing.Size(38, 20);
-            this.rgbBoxRed.TabIndex = 3;
-            // 
-            // rgbBoxGreen
-            // 
-            this.rgbBoxGreen.ForeColor = System.Drawing.Color.Red;
-            this.rgbBoxGreen.Location = new System.Drawing.Point(88, 37);
-            this.rgbBoxGreen.Name = "rgbBoxGreen";
-            this.rgbBoxGreen.Size = new System.Drawing.Size(38, 20);
-            this.rgbBoxGreen.TabIndex = 3;
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(152, 14);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(109, 106);
+            this.button1.TabIndex = 4;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // rgbBoxBlue
             // 
-            this.rgbBoxBlue.ForeColor = System.Drawing.Color.Red;
+            this.rgbBoxBlue.ForeColor = System.Drawing.Color.Black;
+            this.rgbBoxBlue.isDec = true;
             this.rgbBoxBlue.Location = new System.Drawing.Point(88, 62);
+            this.rgbBoxBlue.MaxLength = 3;
             this.rgbBoxBlue.Name = "rgbBoxBlue";
             this.rgbBoxBlue.Size = new System.Drawing.Size(38, 20);
             this.rgbBoxBlue.TabIndex = 3;
+            this.rgbBoxBlue.Text = "0";
+            this.rgbBoxBlue.value = 0;
+            this.rgbBoxBlue.TextChanged += new System.EventHandler(this.rgbBoxBlue_TextChanged);
+            // 
+            // rgbBoxGreen
+            // 
+            this.rgbBoxGreen.ForeColor = System.Drawing.Color.Black;
+            this.rgbBoxGreen.isDec = true;
+            this.rgbBoxGreen.Location = new System.Drawing.Point(88, 37);
+            this.rgbBoxGreen.MaxLength = 3;
+            this.rgbBoxGreen.Name = "rgbBoxGreen";
+            this.rgbBoxGreen.Size = new System.Drawing.Size(38, 20);
+            this.rgbBoxGreen.TabIndex = 3;
+            this.rgbBoxGreen.Text = "0";
+            this.rgbBoxGreen.value = 0;
+            this.rgbBoxGreen.TextChanged += new System.EventHandler(this.rgbBoxGreen_TextChanged);
+            // 
+            // rgbBoxRed
+            // 
+            this.rgbBoxRed.ForeColor = System.Drawing.Color.Black;
+            this.rgbBoxRed.isDec = true;
+            this.rgbBoxRed.Location = new System.Drawing.Point(88, 11);
+            this.rgbBoxRed.MaxLength = 3;
+            this.rgbBoxRed.Name = "rgbBoxRed";
+            this.rgbBoxRed.Size = new System.Drawing.Size(38, 20);
+            this.rgbBoxRed.TabIndex = 3;
+            this.rgbBoxRed.Text = "0";
+            this.rgbBoxRed.value = 0;
+            this.rgbBoxRed.TextChanged += new System.EventHandler(this.rgbBoxRed_TextChanged);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(152, 127);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 5;
             // 
             // rgbControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.rgbBoxBlue);
             this.Controls.Add(this.rgbBoxGreen);
             this.Controls.Add(this.rgbBoxRed);
@@ -143,5 +179,7 @@
         private rgbBox rgbBoxRed;
         private rgbBox rgbBoxGreen;
         private rgbBox rgbBoxBlue;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

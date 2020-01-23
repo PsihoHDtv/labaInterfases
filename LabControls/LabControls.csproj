@@ -73,6 +73,9 @@
     <EmbeddedResource Include="FilePathSelect.resx">
       <DependentUpon>FilePathSelect.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="rgbBox.resx">
+      <DependentUpon>rgbBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="rgbControl.resx">
       <DependentUpon>rgbControl.cs</DependentUpon>
     </EmbeddedResource>
